@@ -57,11 +57,8 @@ public class ContactsApp extends Application {
             }
         });
         Button closeButton = new Button("Close");
-        closeButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent e) {
-                System.exit(0);
-            }
+        closeButton.setOnAction((ActionEvent e) -> {
+            System.exit(0);
         });
         commandPane.getChildren().addAll(viewContactButton, closeButton);
         commandPane.setAlignment(Pos.CENTER);
@@ -83,7 +80,7 @@ public class ContactsApp extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        loadContacts(args[1]);
+        loadContacts(args[0]);
         launch(args);
     }
     
